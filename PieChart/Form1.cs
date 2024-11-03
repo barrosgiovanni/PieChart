@@ -12,6 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PieChart
 {
+    // Group 3:
+    // Daniel Benjumea Villarraga, Giovanni Evangelista De Barros, Max Dyson
+
     public partial class Form1 : Form
     {
         List<Category> ListOfCategories { get; set; } = new List<Category>();
@@ -127,6 +130,31 @@ namespace PieChart
             }
             expenseAmount.Text = "";
             categoriesList.Text = "";
+        }
+
+        private void BtnLoadChart_Click(object sender, EventArgs e)
+        {
+
+            // Clear the previous data from the expensePieChart 
+
+            expensePieChart.Series[0].Points.Clear();
+
+            
+            foreach(Category category in ListOfCategories)
+            {
+
+                // The total amount should not be greater than 0 because it would not make a slice
+
+                if (category.TotalAmount > 0)
+                {
+                    // Inserts a category to the expensePieChart  
+
+                    expensePieChart.Series[0].Points.AddXY(category.Name, category.TotalAmount);
+
+                }
+
+            }
+
         }
     }
 }
