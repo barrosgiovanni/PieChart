@@ -30,9 +30,9 @@ namespace PieChart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.categoriesList = new System.Windows.Forms.ComboBox();
             this.addExpenseLabel = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@ namespace PieChart
             "Utilities"});
             this.categoriesList.Location = new System.Drawing.Point(123, 33);
             this.categoriesList.Name = "categoriesList";
-            this.categoriesList.Size = new System.Drawing.Size(139, 26);
+            this.categoriesList.Size = new System.Drawing.Size(229, 26);
             this.categoriesList.TabIndex = 1;
             // 
             // addExpenseLabel
@@ -104,9 +104,9 @@ namespace PieChart
             // expenseAmount
             // 
             this.expenseAmount.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expenseAmount.Location = new System.Drawing.Point(156, 84);
+            this.expenseAmount.Location = new System.Drawing.Point(155, 84);
             this.expenseAmount.Name = "expenseAmount";
-            this.expenseAmount.Size = new System.Drawing.Size(100, 26);
+            this.expenseAmount.Size = new System.Drawing.Size(116, 26);
             this.expenseAmount.TabIndex = 6;
             // 
             // BtnResetChart
@@ -118,16 +118,18 @@ namespace PieChart
             this.BtnResetChart.TabIndex = 7;
             this.BtnResetChart.Text = "Reset Chart";
             this.BtnResetChart.UseVisualStyleBackColor = true;
+            this.BtnResetChart.Click += new System.EventHandler(this.BtnResetChart_Click);
             // 
             // BtnAddExpense
             // 
             this.BtnAddExpense.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddExpense.Location = new System.Drawing.Point(258, 83);
+            this.BtnAddExpense.Location = new System.Drawing.Point(279, 83);
             this.BtnAddExpense.Name = "BtnAddExpense";
-            this.BtnAddExpense.Size = new System.Drawing.Size(63, 30);
+            this.BtnAddExpense.Size = new System.Drawing.Size(73, 30);
             this.BtnAddExpense.TabIndex = 8;
             this.BtnAddExpense.Text = "Add";
             this.BtnAddExpense.UseVisualStyleBackColor = true;
+            this.BtnAddExpense.Click += new System.EventHandler(this.BtnAddExpense_Click);
             // 
             // label1
             // 
@@ -263,7 +265,7 @@ namespace PieChart
             // 
             this.foodTotal.AutoSize = true;
             this.foodTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foodTotal.Location = new System.Drawing.Point(104, 323);
+            this.foodTotal.Location = new System.Drawing.Point(96, 323);
             this.foodTotal.Name = "foodTotal";
             this.foodTotal.Size = new System.Drawing.Size(43, 18);
             this.foodTotal.TabIndex = 23;
@@ -303,7 +305,7 @@ namespace PieChart
             // 
             this.autoTotal.AutoSize = true;
             this.autoTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoTotal.Location = new System.Drawing.Point(101, 161);
+            this.autoTotal.Location = new System.Drawing.Point(97, 161);
             this.autoTotal.Name = "autoTotal";
             this.autoTotal.Size = new System.Drawing.Size(43, 18);
             this.autoTotal.TabIndex = 19;
@@ -321,17 +323,17 @@ namespace PieChart
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(512, 33);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(631, 427);
             this.chart1.TabIndex = 29;
             this.chart1.Text = "chart1";

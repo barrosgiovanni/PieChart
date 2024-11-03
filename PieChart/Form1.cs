@@ -17,23 +17,23 @@ namespace PieChart
         List<Category> ListOfCategories { get; set; } = new List<Category>();
         public void InitializeCategories()
         {
-            Category auto = new Category("Auto", 0.00);
+            Category auto = new Category("Auto");
             ListOfCategories.Add(auto);
-            Category clothing = new Category("Clothing", 0.00);
+            Category clothing = new Category("Clothing");
             ListOfCategories.Add(clothing);
-            Category education = new Category("Education", 0.00);
+            Category education = new Category("Education");
             ListOfCategories.Add(education);
-            Category entertainment = new Category("Entertainment", 0.00);
+            Category entertainment = new Category("Entertainment");
             ListOfCategories.Add(entertainment);
-            Category food = new Category("Food", 0.00);
+            Category food = new Category("Food");
             ListOfCategories.Add(food);
-            Category health = new Category("Health & Personal Care", 0.00);
+            Category health = new Category("Health & Personal Care");
             ListOfCategories.Add(health);
-            Category housing = new Category("Housing", 0.00);
+            Category housing = new Category("Housing");
             ListOfCategories.Add(housing);
-            Category insurance = new Category("Insurance", 0.00);
+            Category insurance = new Category("Insurance");
             ListOfCategories.Add(insurance);
-            Category utilities = new Category("Utilities", 0.00);
+            Category utilities = new Category("Utilities");
             ListOfCategories.Add(utilities);
         }
         public Form1()
@@ -42,6 +42,10 @@ namespace PieChart
             InitializeComponent();
         }
 
+        private void ResetTracker()
+        {
+
+        }
         private void UpdateValues(Category categoryToBeUpdated)
         {
             switch (categoryToBeUpdated.Name)
@@ -100,6 +104,29 @@ namespace PieChart
                     UpdateValues(categoryToBeUpdated);
                 }
             }
+            expenseAmount.Text = "";
+            categoriesList.Text = "";
+        }
+
+        private void BtnResetChart_Click(object sender, EventArgs e)
+        {
+            foreach (Category category in ListOfCategories)
+            {
+                category.TotalAmount = 0;
+            }
+            foreach (var control in this.Controls)
+            {
+                if (control is Label label)
+                {
+                    if (label.Name.Contains("Total"))
+                    {
+                        label.Text = "0.00";
+                    }
+                    label.Refresh();
+                }
+            }
+            expenseAmount.Text = "";
+            categoriesList.Text = "";
         }
     }
 }
