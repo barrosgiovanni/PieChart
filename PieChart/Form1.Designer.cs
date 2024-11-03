@@ -58,8 +58,8 @@ namespace PieChart
             this.clothingTotal = new System.Windows.Forms.Label();
             this.autoTotal = new System.Windows.Forms.Label();
             this.BtnLoadChart = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.expensePieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.expensePieChart)).BeginInit();
             this.SuspendLayout();
             // 
             // categoryLabel
@@ -128,6 +128,7 @@ namespace PieChart
             this.BtnAddExpense.TabIndex = 8;
             this.BtnAddExpense.Text = "Add";
             this.BtnAddExpense.UseVisualStyleBackColor = true;
+            this.BtnAddExpense.Click += new System.EventHandler(this.BtnAddExpense_Click);
             // 
             // label1
             // 
@@ -185,9 +186,9 @@ namespace PieChart
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(32, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 18);
+            this.label6.Size = new System.Drawing.Size(192, 18);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Health and Personal Care :";
+            this.label6.Text = "HealthandPersonalCare :";
             // 
             // label7
             // 
@@ -253,7 +254,7 @@ namespace PieChart
             // 
             this.healthTotal.AutoSize = true;
             this.healthTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.healthTotal.Location = new System.Drawing.Point(268, 363);
+            this.healthTotal.Location = new System.Drawing.Point(255, 362);
             this.healthTotal.Name = "healthTotal";
             this.healthTotal.Size = new System.Drawing.Size(48, 18);
             this.healthTotal.TabIndex = 24;
@@ -318,30 +319,32 @@ namespace PieChart
             this.BtnLoadChart.TabIndex = 28;
             this.BtnLoadChart.Text = "Load Chart";
             this.BtnLoadChart.UseVisualStyleBackColor = true;
+            this.BtnLoadChart.Click += new System.EventHandler(this.BtnLoadChart_Click);
             // 
-            // chart1
+            // expensePieChart
             // 
+            this.expensePieChart.CausesValidation = false;
             chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
+            this.expensePieChart.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(512, 33);
-            this.chart1.Name = "chart1";
+            this.expensePieChart.Legends.Add(legend5);
+            this.expensePieChart.Location = new System.Drawing.Point(526, 33);
+            this.expensePieChart.Name = "expensePieChart";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series5.Legend = "Legend1";
             series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(631, 427);
-            this.chart1.TabIndex = 29;
-            this.chart1.Text = "chart1";
+            this.expensePieChart.Series.Add(series5);
+            this.expensePieChart.Size = new System.Drawing.Size(631, 427);
+            this.expensePieChart.TabIndex = 29;
+            this.expensePieChart.Text = "expensePieChart";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 533);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(1184, 533);
+            this.Controls.Add(this.expensePieChart);
             this.Controls.Add(this.BtnLoadChart);
             this.Controls.Add(this.utilitiesTotal);
             this.Controls.Add(this.insuranceTotal);
@@ -369,7 +372,7 @@ namespace PieChart
             this.Controls.Add(this.categoryLabel);
             this.Name = "Form1";
             this.Text = "Expense Tracker";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expensePieChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +405,7 @@ namespace PieChart
         private System.Windows.Forms.Label clothingTotal;
         private System.Windows.Forms.Label autoTotal;
         private System.Windows.Forms.Button BtnLoadChart;
-        private Chart chart1;
+        private Chart expensePieChart;
     }
 }
 
