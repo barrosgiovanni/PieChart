@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -103,6 +104,9 @@ namespace PieChart
                     UpdateValues(categoryToBeUpdated);
                 }
             }
+
+            expenseAmount.Text = "";
+            categoriesList.Text = "";
         }
 
         private void BtnLoadChart_Click(object sender, EventArgs e)
@@ -128,6 +132,33 @@ namespace PieChart
 
             }
 
+
+
         }
+
+
+        private void BtnResetChart_Click(object sender, EventArgs e)
+        {
+            foreach (Category category in ListOfCategories)
+            {
+                category.TotalAmount = 0;
+            }
+            foreach (var control in this.Controls)
+            {
+                if (control is Label label)
+                {
+                    if (label.Name.Contains("Total"))
+                    {
+                        label.Text = "0.00";
+                    }
+                    label.Refresh();
+                }
+            }
+            expenseAmount.Text = "";
+            categoriesList.Text = "";
+        }
+     
+
+
     }
 }

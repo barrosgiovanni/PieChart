@@ -30,9 +30,9 @@ namespace PieChart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.categoriesList = new System.Windows.Forms.ComboBox();
             this.addExpenseLabel = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@ namespace PieChart
             "Utilities"});
             this.categoriesList.Location = new System.Drawing.Point(123, 33);
             this.categoriesList.Name = "categoriesList";
-            this.categoriesList.Size = new System.Drawing.Size(139, 26);
+            this.categoriesList.Size = new System.Drawing.Size(198, 26);
             this.categoriesList.TabIndex = 1;
             // 
             // addExpenseLabel
@@ -118,6 +118,7 @@ namespace PieChart
             this.BtnResetChart.TabIndex = 7;
             this.BtnResetChart.Text = "Reset Chart";
             this.BtnResetChart.UseVisualStyleBackColor = true;
+            this.BtnResetChart.Click += new System.EventHandler(this.BtnResetChart_Click);
             // 
             // BtnAddExpense
             // 
@@ -186,9 +187,9 @@ namespace PieChart
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(32, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 18);
+            this.label6.Size = new System.Drawing.Size(207, 18);
             this.label6.TabIndex = 14;
-            this.label6.Text = "HealthandPersonalCare :";
+            this.label6.Text = "Health and Personal Care :";
             // 
             // label7
             // 
@@ -324,17 +325,17 @@ namespace PieChart
             // expensePieChart
             // 
             this.expensePieChart.CausesValidation = false;
-            chartArea5.Name = "ChartArea1";
-            this.expensePieChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.expensePieChart.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.expensePieChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.expensePieChart.Legends.Add(legend3);
             this.expensePieChart.Location = new System.Drawing.Point(526, 33);
             this.expensePieChart.Name = "expensePieChart";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.expensePieChart.Series.Add(series5);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.expensePieChart.Series.Add(series3);
             this.expensePieChart.Size = new System.Drawing.Size(631, 427);
             this.expensePieChart.TabIndex = 29;
             this.expensePieChart.Text = "expensePieChart";
