@@ -10,10 +10,10 @@ namespace PieChart
     {
         public string Name { get; set; }
         public double TotalAmount { get; set; }
-        public Category(string name) 
+        public Category(string name, double totalAmount) 
         { 
             Name = name;
-            TotalAmount = 0.00;
+            TotalAmount = totalAmount;
         }
     }
 }
